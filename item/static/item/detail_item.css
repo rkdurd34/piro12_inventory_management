@@ -1,11 +1,12 @@
 .content_detail{
     width:70vw;
-    margin: 0 auto;
-    height:500px;
-    border: 1px solid lightgray;
+
 }
 
-.content_detail_item{
-
+.content_detail_up{
+    width:70vw;
+    border: 1px solid lightgray;
+    margin: 0 auto;
+    height:300px;
 
 }

@@ -11,6 +11,9 @@ class Customer(models.Model):
     tel = models.PositiveIntegerField(verbose_name="전화번호")
     address = models.CharField(max_length=50,verbose_name="주소")
 
+    def __str__(self):
+        return self.name
+
     def get_absolute_url(self):
 
         return reverse('item:detail_customer', args=[self.pk])

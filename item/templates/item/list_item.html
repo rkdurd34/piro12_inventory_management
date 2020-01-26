@@ -15,7 +15,7 @@
                 <div class="list_itembox_title">이름 : <a href="{% url "item:detail_item" item.pk %}">{{ item.title }}</a></div>
                 <div class="list_itembox_price">가격 : {{ item.price }}</div>
                 <div class="list_itembox_quantity">수량 : {{ item.rest_quantity }}</div>
-                <div class="list_itembox_customer">거래처 : {{ item.customer.name }}</div>
+                <div class="list_itembox_customer"><a href="{% url "item:detail_customer" item.customer.pk %}">거래처 : {{ item.customer.name }}</a></div>
             </div>
         {% endfor %}
     </div>

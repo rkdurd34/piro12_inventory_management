@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static "item/list_customer.css" %}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="list_content">
+        {% for customer in customer_list %}
+            <div class="list_customerbox">
+                <div class="list_itembox_title"><a href="{% url "item:detail_customer" customer.pk %}">{{ customer.name }}</a></div>
+                <div class="list_itembox_price">{{ customer.tel }}</div>
+                <div class="list_itembox_quantity">{{ customer.address }}</div>
+
+            </div>
+        {% endfor %}
+    </div>
+
+
+
+
+{% endblock %}
