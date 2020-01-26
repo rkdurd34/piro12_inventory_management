@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% load static %}
+
+
+{% block extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static "item/detail_customer.css" %}">
+{% endblock %}
+
+{% block content %}
+    <div class="content_detail">
+
+        <div class="content_detail_up">
+            {{ customer.name }}<br>
+            {{ customer.tel }}<br>
+            {{ customer.address }}<br>
+            <hr>
+        </div>
+
+        <div class="content_detail_down">
+            <a href="{% url "item:list_item" %}">목록</a>
+            <a href="">수정</a>
+
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+.content_detail{
+    width:60%;
+
+    margin:0 auto;
+
+}
+.content_detail_up{
+    width:60%;
+    height: 200px;
+    border:1px solid lightgray;
+}

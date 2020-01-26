@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <link rel="stylesheet" href="{% static "main.css" %}">
+    {% block extra_head %}
+    {% endblock %}
+</head>
+<body>
+
+<div class="header">
+
+    <div class="header_nav">
+        <div class="header_nav_left">
+            <a href="{% url "item:list_item" %}"><img src="{% static "pirogramming.png" %}"
+                                                      style="width: 50px;border-radius:100%;" alt=""></a>
+        </div>
+        <div class="header_nav_right">
+            <a href="{% url "item:create_item" %}">상품 등록</a>
+            <a href="{% url "item:register_customer" %}">거래처 등록</a>
+            <a href="{% url "item:list_customer" %}">거래처 관리</a>
+        </div>
+
+    </div>
+</div>
+
+
+{% block content %}
+{% endblock %}
+
+
+
+<div class="footer">
+    <div class="footer_content">
+
+        <p class="text-light">&copy; 피로그래밍 | 회장 : 정성모 </br>
+            서울 특별시 관악구 관악로 1, 서울대학교 벤처 경영 교육 및 연구 동아리
+        </p>
+
+    </div>
+</div>
+
+
+</body>
+</html>

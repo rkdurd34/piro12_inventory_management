@@ -1,0 +1,18 @@
+.list_content{
+    margin:0 auto;
+    width:80%;
+
+
+}
+.list_itembox{
+    width:30%;
+    height:300px;
+    float:left;
+    border: 1px solid lightgray;
+    margin:10px 10px;
+
+
+}
+.list_itembox div{
+    padding: 10px;
+}

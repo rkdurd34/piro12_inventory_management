@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static "item/list.css" %}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="list_content">
+        {% for item in item_list %}
+            <div class="list_itembox">
+
+                    <img src="{{ item.photo.url }}" style="max-width:95%; max-height:50%;"><br>
+
+                <div class="list_itembox_title">이름 : <a href="{% url "item:detail_item" item.pk %}">{{ item.title }}</a></div>
+                <div class="list_itembox_price">가격 : {{ item.price }}</div>
+                <div class="list_itembox_quantity">수량 : {{ item.rest_quantity }}</div>
+                <div class="list_itembox_customer">거래처 : {{ item.customer.name }}</div>
+            </div>
+        {% endfor %}
+    </div>
+
+
+
+
+{% endblock %}

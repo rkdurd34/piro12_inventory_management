@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static "item/detail_item.css" %}">
+{% endblock %}
+
+{% block content %}
+    <div class="content_detail">
+
+            <img src="{{ item.photo.url }}" style="max-width:100%; max-height: 45%;"><br>
+            {{ item.title }}<br>
+            가격 : {{ item.price }}<br>
+            수량 : {{ item.rest_quantity }}<br>
+            제품 설명 : {{ item.content }}<br>
+            거래처 : {{ item.customer.name }}<br>
+
+    </div>
+{% endblock %}
