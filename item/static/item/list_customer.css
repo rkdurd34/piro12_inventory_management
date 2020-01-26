@@ -10,3 +10,6 @@
     border: 1px solid lightgray;
     margin:10px 10px;
 }
+.list_customerbox_name a {
+    text-decoration: none;
+}

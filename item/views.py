@@ -55,4 +55,20 @@ def delete_item(request, pk):
         item.delete()
         return redirect("list_item")
 
+def vote_add(request, pk):
+    item = Item.objects.get(id = pk)
+    item.rest_quantity +=1
+    item.save()
+    return redirect("item:list_item")
+
+def vote_minus(request, pk):
+    item = Item.objects.get(id = pk)
+    item.rest_quantity -=1
+    item.save()
+    return redirect("item:list_item")
+
+
+
+
+
 

@@ -1,12 +1,20 @@
 .content_detail{
     width:70vw;
+    margin:0 auto;
 
 }
 
 .content_detail_up{
     width:70vw;
     border: 1px solid lightgray;
-    margin: 0 auto;
-    height:300px;
+    height:400px;
 
+}
+
+
+.content_detail_up p,.content_detail_up h2 {
+    padding-left: 10px;
+}
+.content_detail a{
+    text-decoration: none;
 }

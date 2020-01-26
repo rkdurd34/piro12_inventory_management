@@ -8,12 +8,12 @@
 {% block content %}
     <div class="content_detail">
         <div class="content_detail_up">
-            <img src="{{ item.photo.url }}" style="max-width:100%; max-height: 150px;"><br>
+            <img src="{{ item.photo.url }}" style="max-width:100%; max-height: 150px; margin: 0 auto;"><br>
             <h2>{{ item.title }}</h2>
-            가격 : {{ item.price }}<br>
-            수량 : {{ item.rest_quantity }}<br>
-            제품 설명 : {{ item.content }}<br>
-            거래처 : {{ item.customer.name }}<br>
+            <p>가격 : {{ item.price }}</p>
+            <p>수량 : {{ item.rest_quantity }}</p>
+            <p>제품 설명 : {{ item.content }}</p>
+            <p><a href="{% url "item:detail_customer" item.customer.pk %}">거래처 : {{ item.customer.name }}</a></p>
         </div>
         <div class="content_detail_down">
             <form action="{% url "item:edit_item" item.pk %}" method="POST">

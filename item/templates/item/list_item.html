@@ -9,13 +9,27 @@
     <div class="list_content">
         {% for item in item_list %}
             <div class="list_itembox">
-
-                    <img src="{{ item.photo.url }}" style="max-width:95%; max-height:50%;"><br>
-
-                <div class="list_itembox_title">이름 : <a href="{% url "item:detail_item" item.pk %}">{{ item.title }}</a></div>
+                <div class="list_itembox_img">
+                    <img src="{{ item.photo.url }}" style="max-width:100%; max-height:130px;"><br>
+                </div>
+                <div class="list_itembox_title">이름 : <a href="{% url "item:detail_item" item.pk %}">{{ item.title }}</a>
+                </div>
                 <div class="list_itembox_price">가격 : {{ item.price }}</div>
                 <div class="list_itembox_quantity">수량 : {{ item.rest_quantity }}</div>
-                <div class="list_itembox_customer"><a href="{% url "item:detail_customer" item.customer.pk %}">거래처 : {{ item.customer.name }}</a></div>
+                <div class="vote_add_minus">
+                    <div>
+                        <form action="{% url "item:vote_add" item.pk %}" method="POST">
+                            {% csrf_token %}
+                            <input type="submit" value="+">
+                        </form>
+                    </div>
+                    <div>
+                        <form action="{% url "item:vote_minus" item.pk %}" method="POST">
+                            {% csrf_token %}
+                            <input type="submit" value="-">
+                        </form>
+                    </div>
+                </div>
             </div>
         {% endfor %}
     </div>

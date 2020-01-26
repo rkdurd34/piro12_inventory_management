@@ -10,9 +10,9 @@
     <div class="list_content">
         {% for customer in customer_list %}
             <div class="list_customerbox">
-                <div class="list_itembox_title"><a href="{% url "item:detail_customer" customer.pk %}">{{ customer.name }}</a></div>
-                <div class="list_itembox_price">{{ customer.tel }}</div>
-                <div class="list_itembox_quantity">{{ customer.address }}</div>
+                <div class="list_customerbox_name"><a href="{% url "item:detail_customer" customer.pk %}"><h2>{{ customer.name }}</h2></a></div>
+                <div class="list_customerbox_tel"><p>{{ customer.tel }}</p></div>
+                <div class="list_customerbox_address"><p>{{ customer.address }}</p></div>
 
             </div>
         {% endfor %}

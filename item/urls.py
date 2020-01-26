@@ -16,5 +16,7 @@ urlpatterns = [
     path('edit/item/<int:pk>', views.edit_item,name="edit_item"),
     path('edit/customer/<int:pk>', views.edit_customer,name="edit_customer"),
     path('delete/customer/<int:pk>',views.delete_customer, name='delete_customer'),
-    path('delete/item/<int:pk>',views.delete_item, name='delete_item')
-]
+    path('delete/item/<int:pk>',views.delete_item, name='delete_item'),
+    path('vote/add/<int:pk>',views.vote_add, name="vote_add"),
+    path('vote/minus/<int:pk>',views.vote_minus, name="vote_minus")
+    ]
