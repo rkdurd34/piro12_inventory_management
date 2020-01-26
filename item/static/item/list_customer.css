@@ -13,3 +13,6 @@
 .list_customerbox_name a {
     text-decoration: none;
 }
+.list_customerbox{
+    padding-left: 10px;
+}
